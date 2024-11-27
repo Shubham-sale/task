@@ -21,7 +21,7 @@ export class AppComponent {
   }
 
   reloadTasks(): void {
-    this.selectedTask = null; // Clear selection after reload
+    this.selectedTask = null; 
     if (this.taskListComponent) {
       this.taskListComponent.loadTasks();
   }
