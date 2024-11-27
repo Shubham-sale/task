@@ -1,12 +1,30 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { TaskFormComponent } from './components/task-form/task-form.component';
+import { TaskListComponent } from './components/task-list/task-list.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, TaskFormComponent, TaskListComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'Task';
+
+
+  selectedTask: any = null;
+  @ViewChild(TaskListComponent) taskListComponent!: TaskListComponent;
+
+
+  selectTaskForEdit(task: any): void {
+    this.selectedTask = task;
+  }
+
+  reloadTasks(): void {
+    this.selectedTask = null; // Clear selection after reload
+    if (this.taskListComponent) {
+      this.taskListComponent.loadTasks();
+  }
+  
+  }
 }

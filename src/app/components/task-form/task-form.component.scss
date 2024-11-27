@@ -1,0 +1,53 @@
+.form-container {
+  height: 100px;
+  width: 100%;
+  text-align: center;
+
+  .form {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 50px;
+    font-size: large;
+  }
+  .form-group {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    label {
+      color: cadetblue;
+      font-weight: 400;
+    }
+    input {
+      padding: 10px;
+    }
+    textarea {
+      padding: 10px;
+    }
+  }
+  .form-check-label {
+    color: cadetblue;
+    font-weight: 400;
+  }
+}
+button {
+  padding: 10px 20px;
+  background-color: rgb(51, 241, 51);
+  font-weight: bold;
+  color: rgb(0, 15, 15);
+  font-size: large;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+
+  &:hover{
+    background-color: greenyellow;
+  }
+
+  &:active {
+    background-color: blueviolet;
+  }
+}
