@@ -13,7 +13,7 @@ export interface Task {
   providedIn: 'root'
 })
 export class TaskService {
-  private apiUrl = 'http://localhost:3000/tasks';
+  private apiUrl = 'https://task-backend-2-w3kh.onrender.com/tasks';
 
   constructor(private http: HttpClient) {}
 
