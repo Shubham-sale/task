@@ -7,13 +7,13 @@ import { ReactiveFormsModule } from '@angular/forms';
 @Component({
   selector: 'app-task-form',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule],  // Import CommonModule and ReactiveFormsModule
+  imports: [CommonModule, ReactiveFormsModule], 
   templateUrl: './task-form.component.html',
   styleUrls: ['./task-form.component.scss'],
 })
 export class TaskFormComponent {
-  @Input() taskToEdit: any = null; // Receive task to edit
-  @Output() taskUpdated = new EventEmitter<void>(); // Notify parent to reload tasks
+  @Input() taskToEdit: any = null; 
+  @Output() taskUpdated = new EventEmitter<void>(); 
 
   taskForm: FormGroup;
   isEditMode = false;

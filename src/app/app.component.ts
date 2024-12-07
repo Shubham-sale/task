@@ -11,10 +11,8 @@ import { TaskListComponent } from './components/task-list/task-list.component';
 })
 export class AppComponent {
 
-
   selectedTask: any = null;
   @ViewChild(TaskListComponent) taskListComponent!: TaskListComponent;
-
 
   selectTaskForEdit(task: any): void {
     this.selectedTask = task;
